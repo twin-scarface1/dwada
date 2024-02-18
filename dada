@@ -2850,7 +2850,18 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
         }], {
             folder: "Token"
         })
-
+        gui.Register([{
+            type: "select",
+            label: "Skin",
+            options: skins,
+            onChange: e => {
+                world.U$[0][0]['ouo'] = skins.indexOf(e)
+                world.U$[0][0]['wv']['ouo'] = skins.indexOf(e)
+                window.currentSkin = skins.indexOf(e)
+            }
+        },], {
+            folder: "Skin"
+        })
         gui.Register([{
             type: "select",
             label: "Accessory",
