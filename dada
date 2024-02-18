@@ -1881,7 +1881,7 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
     initUI: () => {
         let container = document.body;
         let gui = new guify({
-            title: "they fixed ddos whaaaaaaaat",
+            title: "noobby hehe",
             theme: {
                 name: "LOUX",
                 colors: {
@@ -1951,10 +1951,10 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
             label: "Token",
             open: false
         });
-        gui.e.Register({
+        gui.Register({
             type: "folder",
             label: "Skin",
-            open: !1
+            open: false
         })
         gui.Register([{
             type: "button",
@@ -2840,7 +2840,7 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
             folder: "Token"
         })
 
-        , e.Register([{
+        gui.Register([{
             type: "select",
             label: "Accessory",
             options: accessories,
@@ -2852,7 +2852,7 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
         },], {
             folder: "Skin"
         })
-        , e.Register([{
+        gui.Register([{
             type: "select",
             label: "Book",
             options: books,
@@ -2864,7 +2864,7 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
         },], {
             folder: "Skin"
         })
-        , e.Register([{
+        gui.Register([{
             type: "select",
             label: "Bag",
             options: bags,
