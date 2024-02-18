@@ -1951,6 +1951,11 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
             label: "Token",
             open: false
         });
+        gui.e.Register({
+            type: "folder",
+            label: "Skin",
+            open: !1
+        })
         gui.Register([{
             type: "button",
             label: "Set AutoSpike Key",
@@ -2833,6 +2838,43 @@ window.bags = ["Bag 1", "Old Bag", "Bag 2", "Bag 3", "Bag 4", "Bag 5", "Wood Pic
             }
         }], {
             folder: "Token"
+        })
+
+        , e.Register([{
+            type: "select",
+            label: "Accessory",
+            options: accessories,
+            onChange: e => {
+                world.U$[0][0]['oUw'] = accessories.indexOf(e)
+                world.U$[0][0]['wv']['oUw'] = accessories.indexOf(e)
+                window.currentAccessory = accessories.indexOf(e)
+            }
+        },], {
+            folder: "Skin"
+        })
+        , e.Register([{
+            type: "select",
+            label: "Book",
+            options: books,
+            onChange: e => {
+                world.U$[0][0]['WuW'] = books.indexOf(e)
+                world.U$[0][0]['wv']['WuW'] = books.indexOf(e)
+                window.currentBook = books.indexOf(e)
+            }
+        },], {
+            folder: "Skin"
+        })
+        , e.Register([{
+            type: "select",
+            label: "Bag",
+            options: bags,
+            onChange: e => {
+                world.U$[0][0]['Wvu'] = bags.indexOf(e)
+                world.U$[0][0]['wv']['Wvu'] = bags.indexOf(e)
+                window.currentBag = bags.indexOf(e)
+            }
+        },], {
+            folder: "Skin"
         })
     },
     controls: null,
